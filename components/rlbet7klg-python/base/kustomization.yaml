@@ -1,0 +1,12 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+commonLabels:         
+  argocd/app-name: rlbet7klg-python
+  janus-idp.io/tekton: rlbet7klg-python
+  backstage.io/kubernetes-id: rlbet7klg-python
+  backstage.io/kubernetes-namespace: rhtap-app 
+  app.kubernetes.io/part-of: rlbet7klg-python
+resources:
+- deployment.yaml
+- route.yaml
+- service.yaml

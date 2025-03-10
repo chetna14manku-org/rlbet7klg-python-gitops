@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: rlbet7klg-python-gitops
+  description: This is GitOps manifest for rlbet7klg-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=rlbet7klg-python
+    backstage.io/kubernetes-id: rlbet7klg-python 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: chetna14manku-org/rlbet7klg-python-gitops   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:rlbet7klg-python
